@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  h1 설문지 작성 페이지입니다.
+  hr
+  label(for='title') 질문
+  br
+  input(name='title')
+  hr
+  label(for='content') 답변
+  br
+  div#add
+    div.short
+      button(value='shorttext')단일문장
+    div.long
+      button(value='longtext')장문 및 의견
+    div.single
+      button(value='singleselect')단일선택
+    div.multi
+      button(value='multiselect')다중선택
+  hr
+  a(href='javascript:window.history.back();') 뒤로 
+  br
+  br
+  input(type='submit' value="작성")
+  div#answer
+    input.short(type='text', value='scontent')
+    br
+    input.long(type='textarea', cols='50', rows='10')
+    br
+    input.single(type='radio', value='a')
+    input.single(type='text', value='a')
+    br
+    input.single(type='radio',value='b')
+    input.single(type='text', value='b')
+    br
+    input.single(type='radio', value='c')
+    input.single(type='text', value='c')
+    br
+    input.multi(type='checkbox',value='check1')
+    input.multi(type='text', value='check1')
+    br
+    input.multi(type='checkbox',value='check2')
+    input.multi(type='text', value='check2')
+    br
+    input.multi(type='checkbox',value='check2')
+    input.multi(type='text', value='check3')

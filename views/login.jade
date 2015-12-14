@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 로그인페이지입니다.
+  form(action='/login', method='post')
+    label(for='email', class='sr-only') Email address
+    input(
+      type='email', id='email', name='email', class='form-control', 
+      placeholder='Email address', required, autofocus
+    )
+    label(for='password', class='sr-only') Password
+    input(
+      type='password', id='password', name='password', class='form-control', 
+      placeholder='Password', required, autofocus
+    )
+    input(type='submit' value='로그인')
