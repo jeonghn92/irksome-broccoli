@@ -16,3 +16,17 @@ label{
   margin : 10px;
   border-radius: 0.5em;
 }
+input.short{
+  display:none;
+}
+input.long{
+  display:none;
+}
+
+input.single{
+  display:none;
+}
+
+input.multi{
+  display:none;
+}

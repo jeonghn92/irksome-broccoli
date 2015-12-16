@@ -9,39 +9,40 @@ block content
   hr
   label(for='content') 답변
   br
-  div#add
-    div.short
-      button(value='shorttext')단일문장
-    div.long
-      button(value='longtext')장문 및 의견
-    div.single
-      button(value='singleselect')단일선택
-    div.multi
-      button(value='multiselect')다중선택
+  button.short(value='shorttext' onclick='short();')단일문장
+  button.long(value='longtext' onclick='long();')장문 및 의견
+  button.single(value='singleselect' onclick='single();')단일선택
+  button.multi(value='multiselect' onclick='multi();')다중선택
+  br
+  p
+  br
+  br
+  input.single(type='radio', value='a' id='single')
+  input.single(type='text', value='a' id='single')
+  button.addsingle(value='addsingle' onclick='addsingle();')추가
+  br
+  input.single(type='radio',value='b' id='single')
+  input.single(type='text', value='b' id='single')
+  br
+  input.single(type='radio', value='c' id='single')
+  input.single(type='text', value='c' id='single')
+  br
+  input.multi(type='checkbox',value='check1' id='multi')
+  input.multi(type='text', value='check1' id='multi')
+  button.addmulti(value='addmulti')추가
+  br
+  input.multi(type='checkbox',value='check2' id='multi')
+  input.multi(type='text', value='check2' id='multi')
+  br
+  input.multi(type='checkbox',value='check2' id='multi')
+  input.multi(type='text', value='check3' id='multi')
   hr
   a(href='javascript:window.history.back();') 뒤로 
   br
   br
   input(type='submit' value="작성")
-  div#answer
-    input.short(type='text', value='scontent')
-    br
-    input.long(type='textarea', cols='50', rows='10')
-    br
-    input.single(type='radio', value='a')
-    input.single(type='text', value='a')
-    br
-    input.single(type='radio',value='b')
-    input.single(type='text', value='b')
-    br
-    input.single(type='radio', value='c')
-    input.single(type='text', value='c')
-    br
-    input.multi(type='checkbox',value='check1')
-    input.multi(type='text', value='check1')
-    br
-    input.multi(type='checkbox',value='check2')
-    input.multi(type='text', value='check2')
-    br
-    input.multi(type='checkbox',value='check2')
-    input.multi(type='text', value='check3')
+script(id='short' type='text')
+input.short(type='text', value='short' id='short')
+script(id='long' type='textarea')
+input.long(type='textarea', value='long' cols='50', rows='10' id='long')  
+  
